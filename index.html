@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="visualization.js"></script>
+    <style>
+        .error-text {
+            color: red;
+        }
+
+        #indicator {
+            padding: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        #infoBox {
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f2f2f2;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            height: auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <label for="tickerInput">Enter Ticker:</label>
+    <input type="text" id="tickerInput">
+    <button onclick="searchStock()">Search</button>
+
+    <!-- Label and select for choosing a technical indicator -->
+    <label for="optionsSelect">Choose a technical indicator:</label>
+    <select id="optionsSelect">
+        <option value="52W High">52 Week High</option>
+        <option value="52W Low">52 Week Low</option>
+        <option value="200 MA">200 Day Moving Average</option>
+        <option value="Price Target">Analyst Price Target</option>
+    </select>
+
+    <!-- Indicator to display 'BUY' or 'SELL' -->
+    <div id="indicator" style="padding-left: 250px;">Buy or Sell indicator will display here</div>
+
+    <!-- Info box to display information about the selected metric -->
+    <div id="infoBox">Technical indicator information</div>
+
+    <div class="chart-container" style="position: relative; height:400px; width:80vw;">
+        <canvas id="stockChart"></canvas>
+    </div>
+
+    <!-- Error message if a ticker is not found-->
+    <div id="errorContainer" style="display: none;">
+        <p id="errorMessage" class="error-text">Ticker not found. Please enter a valid ticker symbol.</p>
+    </div>
+    
+    <!-- Disclaimer -->
+    <div id="disclaimer" style="text-align: center; position: absolute; bottom: 10px; width: 100%; font-size: 0.8em;">
+    Disclaimer: This is for educational purposes only, and not meant to provide investment advice.
+    </div>
+
+</body>
+</html>

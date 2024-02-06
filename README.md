@@ -1,8 +1,5 @@
 Trading Dashboard – A visualization of equity securities with technical indicators
 
-
-The website can be accessed at: ‘GETPAGES.COM’
-
 Overview:
 
 The purpose of this project was to tell a story through data visualization. I chose to do a stock trading dashboard that was html based and driven by user input. I first needed to gather and combine the data using Python. The next step was to create a SQLite database that the API call could access. Once this was finished, the next steps were the Flask set-up and setting up the formatting of the data into JSON format. The coding to get data into the html came next. The interactive html allows the user to input a security ticker and choose from 1 of 4 technical indicators. The website will display a chart of the chosen security’s price alongside the S&P. In an information box, the selected security price and the technical indicator price along with information about that indicator will be displayed. The indicator that is selected will provide a ‘buy’ or ‘sell’ recommendation. 
@@ -19,7 +16,7 @@ visualization – JavaScript code behind the html
 
 Instructions:
 
-The app_solution.py needs to be run first. This sets up the database from SQLite. It then creates a Flask, which queries the data and prepares it in a JSON format. The index.html needs to be accessed, which loads the web page. Once the web page is loaded, a stock ticker can be entered into the ‘search bar’. A technical indicator can also be chosen. The technical indicator is what determines a ‘buy’ or ‘sell’ recommendation for the searched for stock ticker.
+The app_solution.py needs to be run first. This sets up the database from SQLite. It then creates a Flask, which queries the data and prepares it in a JSON format. The API call is to local host, which is why the index.html will not function in the current situation. The index.html needs to be accessed, which loads the web page. Once the web page is loaded, a stock ticker can be entered into the ‘search bar’. A technical indicator can also be chosen. The technical indicator is what determines a ‘buy’ or ‘sell’ recommendation for the searched for stock ticker.
 
 
 

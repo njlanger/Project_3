@@ -3,6 +3,20 @@ Trading Dashboard – A visualization of equity securities with technical indica
 Overview:
 
 The purpose of this project was to tell a story through data visualization. I chose to do a stock trading dashboard that was html based and driven by user input. I first needed to gather and combine the data using Python. The next step was to create a SQLite database that the API call could access. Once this was finished, the next steps were the Flask set-up and setting up the formatting of the data into JSON format. The coding to get data into the html came next. The interactive html allows the user to input a security ticker and choose from 1 of 4 technical indicators. The website will display a chart of the chosen security’s price alongside the S&P. In an information box, the selected security price and the technical indicator price along with information about that indicator will be displayed. The indicator that is selected will provide a ‘buy’ or ‘sell’ recommendation. 
+
+This is a screen print of the website before any information is entered:
+![image](https://github.com/njlanger/Project_3/assets/143223494/466e75b9-320a-4aad-9de3-85023962ace7)
+
+
+This is a screen print of a 'Buy' recommendation and the security's price graphed over the S&P:
+![image](https://github.com/njlanger/Project_3/assets/143223494/82ca8796-3aa1-4153-99a9-fa989756af0d)
+
+
+This is a screen print of a 'Sell' recommendation:
+![image](https://github.com/njlanger/Project_3/assets/143223494/46ed4c50-5886-462e-83c3-15bbcfd46c55)
+
+
+
 Disclaimers for this project:
 The project was meant for educational purposes only and not to provide trading advice. The prices that are used are from 01/26/2024 and are stagnant. There are only four technical indicators the user can choose from; when making investment decisions, considerations should be given to a larger number of factors. The ‘buy’/’sell’ recommendations are based solely on the theory of buying low and selling high. If a security’s price is below the technical indicator’s price, the recommendation is to ‘buy’. If the security’s price is above the technical indicator, the recommendation is to ‘sell’.
 The files in the Trading Dashboard Folder are as follows:
